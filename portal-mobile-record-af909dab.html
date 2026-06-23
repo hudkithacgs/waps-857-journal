@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九游娱乐 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f2f2;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.6;
+      padding: 2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .page-wrap {
+      max-width: 780px;
+      width: 100%;
+    }
+
+    /* 卡片通用 */
+    .card {
+      background: #ffffff;
+      border: 1px solid #dcdcdc;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.04);
+      padding: 2rem 1.8rem;
+      margin-bottom: 1.8rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    /* 开场短句 hero */
+    .hero {
+      text-align: left;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+    }
+
+    .hero .opener {
+      font-size: 1.6rem;
+      font-weight: 350;
+      letter-spacing: 0.02em;
+      color: #2b2b2b;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .sub-line {
+      font-size: 1rem;
+      color: #5e5e5e;
+      border-left: 3px solid #989898;
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* 承接段落 */
+    .context p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .context p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-link {
+      color: #1f4f6b;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b3c6d3;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .highlight-link:hover {
+      color: #0b3142;
+      text-decoration-color: #1f4f6b;
+    }
+
+    /* 特点列表 —— 温和卡片内嵌 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 0.2rem;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #f9f9f9;
+      border-radius: 14px;
+      padding: 1.2rem 1.2rem 1rem;
+      border: 1px solid #e6e6e6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+    }
+
+    .feature-item .num {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #7b8b9a;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-item h3 {
+      font-size: 1.08rem;
+      font-weight: 550;
+      margin-bottom: 0.3rem;
+      color: #1e2f3a;
+    }
+
+    .feature-item p {
+      font-size: 0.92rem;
+      color: #4a4a4a;
+      line-height: 1.5;
+    }
+
+    /* 可信说明短卡 (FAQ 摘要) */
+    .note-block {
+      background: #f7f7f7;
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+      border: 1px solid #dbdbdb;
+      margin-bottom: 1.8rem;
+    }
+
+    .note-block h4 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #292929;
+    }
+
+    .note-block p {
+      font-size: 0.95rem;
+      color: #434343;
+      margin-bottom: 0.5rem;
+    }
+
+    .note-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .note-block .small-meta {
+      color: #6b6b6b;
+      font-size: 0.9rem;
+    }
+
+    /* 温和结尾 */
+    .closing {
+      text-align: left;
+      border-top: 1px solid #dbdbdb;
+      padding-top: 1.6rem;
+      margin-top: 0.2rem;
+    }
+
+    .closing p {
+      font-size: 0.95rem;
+      color: #3e3e3e;
+      margin-bottom: 0.6rem;
+    }
+
+    .closing .signature {
+      font-size: 0.9rem;
+      color: #6f6f6f;
+      letter-spacing: 0.3px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ddd;
+      margin: 1.2rem 0;
+    }
+
+    /* 响应式 */
+    @media (max-width: 540px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .card {
+        padding: 1.5rem 1rem;
+      }
+      .hero .opener {
+        font-size: 1.4rem;
+      }
+      .feature-grid {
+        flex-direction: column;
+      }
+      .feature-item {
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <!-- 开场短句 -->
+    <div class="card hero">
+      <div class="opener">一份关于站点的整理介绍。</div>
+      <div class="sub-line">九游娱乐 · 信息页 · 基于公开内容编录</div>
+    </div>
+
+    <!-- 承接段落：从站点介绍与可信说明的角度 -->
+    <div class="card context">
+      <p>
+        <strong>九游娱乐</strong> 这一名称所指向的平台，通常被用户简称为九游，在移动端及泛娱乐领域积累了一定的服务经验。从站点的功能定位来看，它主要提供休闲互动、游戏资讯及相关内容的整合展示，并通过 <a href="https://portal-mobile-jiuyou.com" class="highlight-link">九游娱乐</a> 作为官方入口，为用户提供一致的访问途径。
+      </p>
+      <p>
+        在长期运营中，该平台逐渐形成了自己的内容组织方式，包括但不限于游戏介绍、活动信息以及社区动态。需要说明的是，以下内容均基于站点本身呈现的信息进行客观整理，不包含任何主观评价或承诺。如果你希望直接浏览其页面，可以通过上方的链接进入，了解更完整的一手资料。
+      </p>
+      <p>
+        作为一份介绍页，我们更愿意以温和、平实的笔触，把所见所得梳理成可读的条目，供初次接触的人参考。
+      </p>
+    </div>
+
+    <!-- 特点列表（卡片内嵌） -->
+    <div class="card">
+      <h2 style="font-weight: 400; font-size: 1.25rem; margin-bottom: 1.2rem; color: #1d2c38;">站点特点 · 概览</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="num">01</div>
+          <h3>移动端优先</h3>
+          <p>界面与交互针对手机、平板等设备进行适配，浏览和操作相对流畅。</p>
+        </div>
+        <div class="feature-item">
+          <div class="num">02</div>
+          <h3>内容栏目清晰</h3>
+          <p>主要分为游戏资讯、活动中心、推荐模块，结构简单，方便查找。</p>
+        </div>
+        <div class="feature-item">
+          <div class="num">03</div>
+          <h3>信息展示型</h3>
+          <p>侧重内容陈列与导航，而不是强制注册或下载，降低初次使用门槛。</p>
+        </div>
+        <div class="feature-item">
+          <div class="num">04</div>
+          <h3>持续更新</h3>
+          <p>从页面动态来看，内容会随版本或运营节奏进行常规刷新。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 可信说明 / FAQ 摘要风格 -->
+    <div class="note-block">
+      <h4>关于可信说明 · 几个常见问题</h4>
+      <p><strong>▸ 这个站点是官方吗？</strong> 页面展示的信息均为平台自身发布的内容，可通过链接直接访问核实。</p>
+      <p><strong>▸ 需要注册才能看吗？</strong> 大部分简介、列表、资讯可直接浏览，部分交互功能可能需登录账户。</p>
+      <p><strong>▸ 信息准确吗？</strong> 本介绍页仅整理站点可见文字，不额外添加解读，建议以 <a href="https://portal-mobile-jiuyou.com" class="highlight-link">九游娱乐</a> 实际页面为准。</p>
+      <p class="small-meta">✻ 摘要基于公开页面整理，仅供参考。</p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="card closing">
+      <p>如果你正在寻找一个结构清晰、专注移动端的内容平台，不妨花几分钟浏览一下上述链接中的页面，自己感受它的布局与内容调性。信息时代，最好的验证方式永远是亲自看一看。</p>
+      <p>希望这份简单的整理能为你提供一点帮助。如有更多疑问，站点本身往往有更完整的帮助或关于页面可以查阅。</p>
+      <div class="signature">—— 整理于 2025 · 仅作介绍用途</div>
+    </div>
+  </div>
+</body>
+</html>
